@@ -1,0 +1,72 @@
+<% layout('/layouts/boilerplate') %>
+<body>
+  <div class="row">
+    <div class="col-4 offset-3">
+      <h1>Add wonder</h1>
+      <form action="/listing" method="post">
+        <div class="mb-3">
+          <input
+            type="text"
+            name="listing[title]"
+            class="form-control"
+            placeholder="title"
+            required
+          />
+        </div>
+
+        <div class="mb-3">
+          <textarea
+            type="text"
+            name="listing[description]"
+            class="form-control"
+            placeholder="description"
+            required
+          ></textarea>
+        </div>
+
+        <div class="mb-3">
+          <input
+            type="text"
+            name="listing[image]"
+            class="form-control"
+            placeholder="iamge link"
+          />
+        </div>
+
+        <div class="row mb-3">
+          <div class="col-4">
+            <input
+              type="number"
+              name="listing[price]"
+              class="form-control"
+              placeholder="price"
+              required
+              min="599"
+            />
+          </div>
+          <div class="col">
+            <input
+              type="text"
+              name="listing[location]"
+              class="form-control"
+              placeholder="location"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <input
+            type="text"
+            name="listing[country]"
+            class="form-control"
+            placeholder="country"
+            required
+          />
+        </div>
+
+        <button type="submit" class="btn btn-dark">Add</button>
+      </form>
+    </div>
+  </div>
+</body>

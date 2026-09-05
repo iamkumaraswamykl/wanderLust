@@ -1,0 +1,104 @@
+/* body */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  flex: 1;
+}
+.navbar {
+  height: 5rem;
+  background-color: white;
+}
+
+.fa-compass {
+  color: red;
+}
+
+footer {
+  text-align: center;
+}
+
+.f-info-links {
+  width: 100%;
+}
+
+.f-info-socials {
+  width: 100%;
+}
+
+.f-info-links a {
+  text-decoration: none;
+}
+
+.f-info-links a:hover {
+  text-decoration: underline;
+  font-size: large;
+}
+
+.f-info {
+  height: 8 rem;
+  background-color: lightgray;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: space-evenly;
+}
+
+/* cards */
+.listing {
+  display: flex;
+  justify-content: space-around;
+}
+
+.card {
+  border: none;
+  margin-bottom: 3rem;
+}
+
+.card-img-top {
+  border-radius: 2em !important;
+  object-fit: cover !important;
+  width: 100%;
+}
+
+.card-body {
+  padding: 0 !important;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+}
+
+.listing-link {
+  text-decoration: none;
+}
+
+/* card effect */
+
+.card-img-overlay {
+  opacity: 0;
+}
+
+.card-img-overlay:hover {
+  opacity: 0.2;
+  background-color: gainsboro;
+}
+
+/* showid */
+.card {
+  display: flex;
+  justify-content: space-around;
+}
+
+.card-img-top {
+  height: 30vh;
+}
+
+.id-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
