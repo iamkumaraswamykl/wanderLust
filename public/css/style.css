@@ -3,6 +3,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background-color: #fdfbf7;
 }
 
 .container {
@@ -101,4 +102,9 @@ footer {
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
+}
+
+/*alerts*/
+.alert {
+  box-shadow: 10px 10px 10px black;
 }
