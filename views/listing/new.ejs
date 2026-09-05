@@ -3,7 +3,7 @@
   <div class="row">
     <div class="col-4 offset-3">
       <h1>Add wonder</h1>
-      <form action="/listing" method="post">
+      <form action="/listing" method="post" class="needs-validation" novalidate>
         <div class="mb-3">
           <input
             type="text"
@@ -12,6 +12,8 @@
             placeholder="title"
             required
           />
+          <div class="valid-feedback">Okay!</div>
+          <div class="invalid-feedback">Title cannot be empty</div>
         </div>
 
         <div class="mb-3">
@@ -22,6 +24,8 @@
             placeholder="description"
             required
           ></textarea>
+          <div class="valid-feedback">Okay!</div>
+          <div class="invalid-feedback">description something</div>
         </div>
 
         <div class="mb-3">
@@ -34,15 +38,17 @@
         </div>
 
         <div class="row mb-3">
-          <div class="col-4">
+          <div class="col-5">
             <input
-              type="number"
+              type="text"
               name="listing[price]"
               class="form-control"
               placeholder="price"
               required
               min="599"
             />
+            <div class="valid-feedback">Okay!</div>
+            <div class="invalid-feedback">Fill up Price!!</div>
           </div>
           <div class="col">
             <input
@@ -52,6 +58,8 @@
               placeholder="location"
               required
             />
+            <div class="valid-feedback">Okay!</div>
+            <div class="invalid-feedback">invalid location</div>
           </div>
         </div>
 
@@ -63,6 +71,8 @@
             placeholder="country"
             required
           />
+          <div class="valid-feedback">Okay!</div>
+          <div class="invalid-feedback">Invalid country</div>
         </div>
 
         <button type="submit" class="btn btn-dark">Add</button>

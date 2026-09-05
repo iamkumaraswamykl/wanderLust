@@ -3,14 +3,22 @@
   <div class="row">
     <h1><i class="fa-solid fa-gear"></i> "<%= list.title %>"</h1>
     <div class="col-4 offset-3">
-      <form action="/listing/<%= list._id%>?_method=PUT" method="post">
+      <form
+        action="/listing/<%= list._id%>?_method=PUT"
+        method="post"
+        class="needs-validation"
+        novalidate
+      >
         <div class="mb-3">
           <input
             type="text"
             name="listing[title]"
             value="<%=list.title%>"
             class="form-control"
+            required
+            placeholder="title"
           />
+          <div class="invalid-feedback">fill up</div>
         </div>
         <div class="mb-3">
           <textarea
@@ -18,9 +26,12 @@
             name="listing[description]"
             rows="4"
             class="form-control"
+            placeholder="catchy description"
+            required
           >
-<%= list.description%> </textarea
+          <%= list.description%> </textarea
           >
+          <div class="invalid-feedback">empty!!!</div>
         </div>
         <div class="mb-3">
           <input
@@ -28,31 +39,41 @@
             name="listing[image]"
             value="<%=list.image%>"
             class="form-control"
+            required
           />
         </div>
+
         <div class="mb-3">
           <input
             type="number"
             name="listing[price]"
             value="<%= list.price %>"
             class="form-control"
+            required
           />
+          <div class="invalid-feedback">empty!!!</div>
         </div>
+
         <div class="mb-3">
           <input
             type="text"
             name="listing[location]"
             value="<%= list.location %>"
             class="form-control"
+            required
           />
+          <div class="invalid-feedback">Empty!!!</div>
         </div>
+
         <div class="mb-3">
           <input
             type="text"
             name="listing[country]"
             value="<%= list.country %>"
             class="form-control"
+            required
           />
+          <div class="invalid-feedback">Empty!!!</div>
         </div>
 
         <button type="submit" class="btn btn-dark btn-edit">sumbit</button>
